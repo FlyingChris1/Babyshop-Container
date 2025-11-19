@@ -1,37 +1,40 @@
-# E-Commerce Project For Baby Tools
+# Baby tools shop
 
-### TECHNOLOGIES
+This project provides a minimal, fully containerized application setup using Docker. All necessary dependencies, migrations, and startup steps are handled during the image build, making the application ready to run immediately through an exposed port.
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Quickstart](#Quickstart)
+- [Usage](#Usage)
+
+### Prerequisites
 
 - Python 3.9
 - Django 4.0.2
-- Venv
+- Virtual Machine
+- Docker engine
 
-### Hints
+### Quickstart
 
-This section will cover some hot tips when trying to interacting with this repository:
+- Clone the repository: 
 
-- Settings & Configuration for Django can be found in `babyshop_app/babyshop/settings.py`
-- Routing: Routing information, such as available routes can be found from any `urls.py` file in `babyshop_app` and corresponding subdirectories
+```bash
+ggit clone <REPOSITORY_URL>
+cd <REPOSITORY_NAME>
+```
+- Build Docker image
 
-### Photos
+```bash
+docker build -t <Image-Name> .
+```
 
-##### Home Page with login
+- Start Docker Container
 
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080815407.jpg"></img>
-##### Home Page with filter
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080840305.jpg"></img>
-##### Product Detail Page
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080934541.jpg"></img>
+```bash
+docker run -dt -p 8080:8080 <Image-Name>
+```
 
-##### Home Page with no login
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080953570.jpg"></img>
-
-
-##### Register Page
-
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081016022.jpg"></img>
+### Usage
 
 
-##### Login Page
-
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081044867.jpg"></img>
