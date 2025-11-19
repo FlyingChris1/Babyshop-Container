@@ -10,10 +10,11 @@ This project provides a minimal, fully containerized application setup using Doc
 
 ### Prerequisites
 
-- Python 3.9
-- Django 4.0.2
+- Python >= 3.9
+- Django >= 4.0.2
 - Virtual Machine
 - Docker engine
+- Venv
 
 ### Quickstart
 
@@ -36,5 +37,39 @@ docker run -dt -p 8080:8080 <Image-Name>
 ```
 
 ### Usage
+
+- Install Venv package
+
+```bash
+sudo apt install python3.12-venv
+```
+
+- create & activate Venv
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+- Install and Upgrade pip and requirements.txt
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+- Install django
+
+```bash
+pip install django
+```
+
+- Migarte the database
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
 
 
