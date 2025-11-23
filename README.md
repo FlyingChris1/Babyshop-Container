@@ -8,15 +8,12 @@ This project provides a minimal, fully containerized application setup using Doc
 - [Quickstart](#Quickstart)
 - [Usage](#Usage)
 
-### Prerequisites
+## Prerequisites
 
 - Python >= 3.9
-- Django >= 4.0.2
-- Virtual Machine
 - Docker engine
-- Venv
 
-### Quickstart
+## Quickstart
 
 - Clone the repository: 
 
@@ -36,15 +33,15 @@ docker build -t <Image-Name> .
 docker run -dt -p 8080:8080 <Image-Name>
 ```
 
-### Usage
+## Usage
 
 - Install Venv package
 
 ```bash
-sudo apt install python3.12-venv
+sudo apt install python:3.11-slim
 ```
 
-- create & activate Venv
+- Create & activate Venv
 
 ```bash
 python3 -m venv venv
