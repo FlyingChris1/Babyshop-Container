@@ -1,37 +1,72 @@
-# E-Commerce Project For Baby Tools
+# Baby tools shop
 
-### TECHNOLOGIES
+This project provides a minimal, fully containerized application setup using Docker. All necessary dependencies, migrations, and startup steps are handled during the image build, making the application ready to run immediately through an exposed port.
 
-- Python 3.9
-- Django 4.0.2
-- Venv
+## Table of Contents
 
-### Hints
+- [Prerequisites](#prerequisites)
+- [Quickstart](#Quickstart)
+- [Usage](#Usage)
 
-This section will cover some hot tips when trying to interacting with this repository:
+## Prerequisites
 
-- Settings & Configuration for Django can be found in `babyshop_app/babyshop/settings.py`
-- Routing: Routing information, such as available routes can be found from any `urls.py` file in `babyshop_app` and corresponding subdirectories
+- Python >= 3.9
+- Docker engine
 
-### Photos
+## Quickstart
 
-##### Home Page with login
+- Clone the repository: 
 
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080815407.jpg"></img>
-##### Home Page with filter
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080840305.jpg"></img>
-##### Product Detail Page
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080934541.jpg"></img>
+```bash
+ggit clone <REPOSITORY_URL>
+cd <REPOSITORY_NAME>
+```
+- Build Docker image
 
-##### Home Page with no login
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323080953570.jpg"></img>
+```bash
+docker build -t <Image-Name> .
+```
+
+- Start Docker Container
+
+```bash
+docker run -dt -p 8080:8080 <Image-Name>
+```
+
+## Usage
+
+- Install Venv package
+
+```bash
+sudo apt install python:3.11-slim
+```
+
+- Create & activate Venv
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+- Install and Upgrade pip and requirements.txt
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+- Install django
+
+```bash
+pip install django
+```
+
+- Migarte the database
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
+```
 
 
-##### Register Page
-
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081016022.jpg"></img>
-
-
-##### Login Page
-
-<img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081044867.jpg"></img>
